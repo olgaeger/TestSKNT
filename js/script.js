@@ -6,7 +6,6 @@ function getTariffFromId(n){
     var maxPrice = thisTariffObj.maxPrice;
     var thisTarifContent = '<div class="tariff-title"><div onclick="switchToDisplay(1);"><svg class="pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="transform: rotate(180deg)"><path d="M12 30 L24 16 12 2" /></svg></div><div class="center"><p>Тариф "'+ thisTariffObj.title+'"</p></div></div>';
     var concept = '<div class="box">';
-    //сортируем по ID и выводим
     thisTariffObj.tarifs.sort(
         function (a, b) {
             if (a.ID > b.ID) {

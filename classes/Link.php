@@ -7,7 +7,7 @@ class Link  // Объявление класса Link
         if ($this->isLink($link)){
 			$this->link = $link;}
 		else {
-			throw new \InvalidArgumentException('this not link');}
+			throw new \InvalidArgumentException('this is not link');}
 	}
 //Получение содержания
 	public function getContents(){ 
@@ -20,7 +20,7 @@ class Link  // Объявление класса Link
 		if (get_headers($this->link, 1)['0']=='HTTP/1.1 200 OK'||get_headers($this->link, 1)['0']=='HTTP/1.1 301 Moved Permanently'){
 			return true;
 		}else{
-			throw new \LogicException('link not available');
+			throw new \LogicException('link is not available');
 		}
 	}
 // Валидация URL	
